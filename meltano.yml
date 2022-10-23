@@ -5,3 +5,8 @@ environments:
 - name: dev
 - name: staging
 - name: prod
+plugins:
+  extractors:
+  - name: tap-snowflake
+    variant: transferwise
+    pip_url: pipelinewise-tap-snowflake
