@@ -10,3 +10,9 @@ plugins:
   - name: tap-snowflake
     variant: transferwise
     pip_url: pipelinewise-tap-snowflake
+    config:
+      account: zdwddyn-da12988
+      user: matawalle4u
+      warehouse: DRAFTDEVTEST
+      dbname: SNOWFLAKE_SAMPLE_DATA
+      tables: SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_14_TOTAL,SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_16_TOTAL
