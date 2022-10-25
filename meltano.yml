@@ -14,14 +14,14 @@ plugins:
       account: zdwddyn-da12988
       user: matawalle4u
       warehouse: DRAFTDEVTEST
-      dbname: SNOWFLAKE_SAMPLE_DATA
-      tables: SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_14_TOTAL
+      dbname: TEST_DEV
+      tables: TEST_DEV.PUBLIC.TEST_ENV_TABLE
     metadata:
-      some_stream_id:
-        replication-method: INCREMENTAL
-        replication-key: created_at
-        created_at:
-          is-replication-key: true
+        '*':
+          replication-method: FULL_TABLE
+    select:
+      - '*.*NAME'
+
   loaders:
   - name: target-csv
     variant: hotgluexyz
