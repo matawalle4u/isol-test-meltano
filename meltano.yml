@@ -20,7 +20,7 @@ plugins:
         '*':
           replication-method: FULL_TABLE
     select:
-      - '*.*NAME'
+      - '*.*'
 
   loaders:
   - name: target-csv
