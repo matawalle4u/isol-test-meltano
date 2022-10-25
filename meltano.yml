@@ -15,4 +15,16 @@ plugins:
       user: matawalle4u
       warehouse: DRAFTDEVTEST
       dbname: SNOWFLAKE_SAMPLE_DATA
-      tables: SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_14_TOTAL,SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_16_TOTAL
+      tables: SNOWFLAKE_SAMPLE_DATA.WEATHER.DAILY_14_TOTAL
+    metadata:
+      some_stream_id:
+        replication-method: INCREMENTAL
+        replication-key: created_at
+        created_at:
+          is-replication-key: true
+  loaders:
+  - name: target-csv
+    variant: hotgluexyz
+    pip_url: git+https://github.com/hotgluexyz/target-csv.git
+    config:
+      destination_path: ''
