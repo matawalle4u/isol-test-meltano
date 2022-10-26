@@ -5,6 +5,13 @@ environments:
 - name: dev
 - name: staging
 - name: prod
+  config:
+    plugins:
+      extractors:
+      - name: tap-snowflake
+        config:
+          dbname: PROD_DEV
+          tables: PROD_DEV.PUBLIC.PROD_TABLE
 plugins:
   extractors:
   - name: tap-snowflake
@@ -17,10 +24,10 @@ plugins:
       dbname: TEST_DEV
       tables: TEST_DEV.PUBLIC.TEST_ENV_TABLE
     metadata:
-        '*':
-          replication-method: FULL_TABLE
+      '*':
+        replication-method: FULL_TABLE
     select:
-      - '*.*'
+    - '*.*'
 
   loaders:
   - name: target-csv
