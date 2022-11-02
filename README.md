@@ -1,4 +1,4 @@
-# Isolated Test Environment Implementation with Meltano ElT
+# Isolated Test Environment Implementation with Meltano and SnowFlake
 
 ## Implementation details
 
