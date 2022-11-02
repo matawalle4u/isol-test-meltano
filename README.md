@@ -44,7 +44,7 @@ To use the system follow the instructions below
 ```bash
 meltano --environment=test elt tap-snowflake target-csv
 ```
-You may switch environments by changing the environment in the **_environment=<new_environment_name>_**
+You may switch environments by changing the environment in the **_--environment=<new_environment_name>_**
 
 
 [def]: https://i.imgur.com/uI0hX61.png
