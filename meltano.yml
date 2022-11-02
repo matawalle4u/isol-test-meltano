@@ -13,6 +13,13 @@ environments:
           dbname: PROD_DEV
           tables: PROD_DEV.PUBLIC.PROD_TABLE
 - name: test
+  config:
+    plugins:
+      extractors:
+      - name: tap-snowflake
+        config:
+          dbname: TEST_DEV
+          tables: TEST_DEV.PUBLIC.TEST_ENV_TABLE
 plugins:
   extractors:
   - name: tap-snowflake

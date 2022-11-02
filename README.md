@@ -7,7 +7,7 @@ The system uses two isolated environments, **_test environment_** to extract dat
 
 The system architecture is illustrated in the picture below
 
-![System Architecture](https://i.imgur.com/uI0hX61.png)
+![System Architecture][def]
 
 ## Installation
 - Install meltano by running the command below in your terminal
@@ -26,3 +26,6 @@ To use the system follow the instructions below
 meltano --environment=test elt tap-snowflake target-csv
 ```
 You may switch environments by
+
+
+[def]: https://i.imgur.com/uI0hX61.png
