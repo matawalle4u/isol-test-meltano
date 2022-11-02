@@ -10,12 +10,58 @@ The system architecture is illustrated in the picture below
 ![System Architecture][def]
 
 ## Installation
-- Install meltano by running the command below in your terminal
+
+- Clone the project repo by running
+
+```bash
+git clone https://github.com/matawalle4u/isol-test-meltano.git
+```
+
+- Navigate to the cloned folder on your local computer by running
+
+```bash
+cd isol-test-meltano
+```
+
+- Install Meltano by running
 
 ```bash
 pip install meltano
 ```
-- Create a meltano 
+
+- Create a meltano environment **_test_** by running
+
+```bash
+meltano environment add test
+```
+
+- Add a tap-snowflake extractor by running
+
+```bash
+	meltano add extractor tap-snowflake
+```
+
+- Configure the extractor added by running
+
+```bash
+	meltano config tap-snowflake set --interactive
+```
+
+- Fill all the details of your snowflake account, databases and tables to be used
+
+- Add a loader target-csv by running
+
+```bash
+	meltano add loader target-csv
+```
+
+- Configure the loader added by running
+
+```bash
+	meltano config target-csv set --interactive
+```
+
+
 
 ## Usage
 
