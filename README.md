@@ -7,7 +7,7 @@ The system uses two isolated environments, **_test environment_** to extract dat
 
 The system architecture is illustrated in the picture below
 
-![System Architecture][def]
+![System Architecture]('System Architecture.png')
 
 ## Installation
 
@@ -29,38 +29,11 @@ cd isol-test-meltano
 pip install meltano
 ```
 
-- Create a meltano environment **_test_** by running
-
-```bash
-meltano environment add test
-```
-
-- Add a tap-snowflake extractor by running
-
-```bash
-meltano add extractor tap-snowflake
-```
-
-- Configure the extractor added by running
+- Configure the extractor added to use your snowflake account, databases and tables by running
 
 ```bash
 meltano config tap-snowflake set --interactive
 ```
-
-- Fill all the details of your snowflake account, databases and tables to be used
-
-- Add a loader target-csv by running
-
-```bash
-meltano add loader target-csv
-```
-
-- Configure the loader added by running
-
-```bash
-meltano config target-csv set --interactive
-```
-
 
 
 ## Usage
@@ -71,7 +44,7 @@ To use the system follow the instructions below
 ```bash
 meltano --environment=test elt tap-snowflake target-csv
 ```
-You may switch environments by
+You may switch environments by changing the environment in the **_environment=<new_environment_name>_**
 
 
 [def]: https://i.imgur.com/uI0hX61.png
