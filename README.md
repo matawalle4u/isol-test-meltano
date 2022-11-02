@@ -38,13 +38,13 @@ meltano environment add test
 - Add a tap-snowflake extractor by running
 
 ```bash
-	meltano add extractor tap-snowflake
+meltano add extractor tap-snowflake
 ```
 
 - Configure the extractor added by running
 
 ```bash
-	meltano config tap-snowflake set --interactive
+meltano config tap-snowflake set --interactive
 ```
 
 - Fill all the details of your snowflake account, databases and tables to be used
@@ -52,13 +52,13 @@ meltano environment add test
 - Add a loader target-csv by running
 
 ```bash
-	meltano add loader target-csv
+meltano add loader target-csv
 ```
 
 - Configure the loader added by running
 
 ```bash
-	meltano config target-csv set --interactive
+meltano config target-csv set --interactive
 ```
 
 
