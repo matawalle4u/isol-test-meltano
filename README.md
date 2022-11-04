@@ -9,6 +9,14 @@ The system architecture is illustrated in the picture below
 
 ![System Architecture](https://github.com/matawalle4u/isol-test-meltano/blob/main/System%20Architecture.png)
 
+## Requirements
+
+- A recent version of [python](https://python.org) programming language (Python version 3.8.10 was used for this article)
+- A recent python preferred installer program i.e [pip](https://pip.pypa.io/en/stable/installation/) (pip 22.3 was used for this article)
+- You may need to install a python [virtual](https://docs.python.org/3/library/venv.html) environment (It is optional but recommended)
+- A recent version of [Meltano](https://docs.meltano.com/getting-started/installation) 
+
+
 ## Installation
 
 - Clone the project repo by running
