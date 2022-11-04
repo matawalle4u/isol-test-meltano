@@ -7,7 +7,7 @@ The system uses two isolated environments, **_test environment_** to extract dat
 
 The system architecture is illustrated in the picture below
 
-![System Architecture](https://github.com/matawalle4u/isol-test-meltano/blob/main/System%20Architecture.png)
+![System Sketch](https://i.imgur.com/jlX2QS1.png)
 
 ## Requirements
 
