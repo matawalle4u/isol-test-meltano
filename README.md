@@ -1,4 +1,4 @@
-# Isolated Test Environment Implementation with Meltano and SnowFlake
+# Isolated Test Environment Implementation with Meltano and Snowflake
 
 ## Implementation details
 
