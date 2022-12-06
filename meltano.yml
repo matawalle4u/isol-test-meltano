@@ -1,45 +1,5 @@
 version: 1
-default_environment: dev
+default_environment: testdev
 project_id: bc911c21-8b29-44dd-8c01-5327ec3ded7b
-environments:
-- name: dev
-- name: staging
-- name: prod
-  config:
-    plugins:
-      extractors:
-      - name: tap-snowflake
-        config:
-          dbname: PROD_DEV
-          tables: PROD_DEV.PUBLIC.PROD_TABLE
-- name: test
-  config:
-    plugins:
-      extractors:
-      - name: tap-snowflake
-        config:
-          dbname: TEST_DEV
-          tables: TEST_DEV.PUBLIC.TEST_ENV_TABLE
-plugins:
-  extractors:
-  - name: tap-snowflake
-    variant: transferwise
-    pip_url: pipelinewise-tap-snowflake
-    config:
-      account: zdwddyn-da12988
-      user: matawalle4u
-      warehouse: DRAFTDEVTEST
-      dbname: TEST_DEV
-      tables: TEST_DEV.PUBLIC.TEST_ENV_TABLE
-    metadata:
-      '*':
-        replication-method: FULL_TABLE
-    select:
-    - '*.*'
-
-  loaders:
-  - name: target-csv
-    variant: hotgluexyz
-    pip_url: git+https://github.com/hotgluexyz/target-csv.git
-    config:
-      destination_path: ''
+include_paths:
+- ./environments/*.meltano.yml
