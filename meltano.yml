@@ -1,5 +1,5 @@
 version: 1
-default_environment: testdev
+default_environment: test
 project_id: bc911c21-8b29-44dd-8c01-5327ec3ded7b
 include_paths:
 - ./environments/*.meltano.yml
