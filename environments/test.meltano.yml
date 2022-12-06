@@ -1,0 +1,38 @@
+environments:
+- name: test
+  config:
+    plugins:
+      extractors:
+      - name: tap-snowflake
+        config:
+          dbname: USERDEV_PROD
+          user: ${USER_PREFIX}
+          role: ${USER_PREFIX}
+          warehouse: DRAFTDEVTEST
+          tables: PROD_DEV.PUBLIC.PROD_TABLE
+          account: zdwddyn-da12988
+
+      loaders:
+      - name: target-snowflake
+        config:
+          dbname: USERDEV_RAW
+          user: ${USER_PREFIX}
+          role: ${USER_PREFIX}
+          warehouse: DRAFTDEVTEST
+          tables: PROD_DEV.PUBLIC.PROD_TABLE
+
+      transformers:
+      - name: dbt-snowflake
+        config:
+          user: ${USER_PREFIX}
+          role: ${USER_PREFIX}
+          warehouse: DRAFTDEVTEST
+          database: USERDEV_PROD
+          database_prep: USERDEV_PREP
+          database_raw: RAW
+          target_schema_prefix: ${USER_PREFIX}_
+          account: zdwddyn-da12988
+          schema: PUBLIC
+          tables: PROD_DEV.PUBLIC.PROD_TABLE
+  env:
+    USER_PREFIX: matawalle4u
